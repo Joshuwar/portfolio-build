@@ -1,0 +1,133 @@
+// Styles in progress to be moved into components/modules
+
+
+// Global
+
+	// Global margin
+.sitewrap {
+	margin: 8vw; // relative unit, works on small to large screen, not sure about XXXtra large screens...
+}
+	// Global lists
+ul, ol {
+	margin-bottom: $small-spacing;
+}
+
+// Functions
+
+// Function for positioning text in the vertical centre of buttons etc.
+@function _vMiddlePadding($v-padding, $h-padding:"") {
+	$baseline-multiplier: 0.15; // 
+	@if $h-padding != "" {
+		@return ($v-padding + $v-padding*$baseline-multiplier) unquote($h-padding) $v-padding unquote($h-padding);
+	} @else {
+		@return ($v-padding + ($v-padding*$baseline-multiplier)) $v-padding $v-padding $v-padding;
+	}
+}
+
+// Styleguide
+
+	// Buttons
+.styleguide__smbutton,
+.styleguide__smbutton--primary {
+	font-size: $small-spacing/1.5;
+	padding: _vMiddlePadding($small-spacing/2);
+}
+
+.styleguide__medbutton,
+.styleguide__medbutton--primary {
+	font-size: $small-spacing/1.2;
+	padding: _vMiddlePadding($small-spacing/1.5);
+}
+.styleguide__lgbutton,
+.styleguide__lgbutton--primary {
+
+}
+
+.styleguide__lgbutton--primary,
+.styleguide__medbutton--primary, 
+.styleguide__smbutton--primary {
+	color: $colourBrightRed;
+	border-color: $colourBrightRed;
+}
+
+	// Messages
+.styleguide__success-message,
+.styleguide__helper-text,
+.styleguide__error-message {
+	padding: _vMiddlePadding($small-spacing);
+}
+
+.styleguide__error-message {
+	color: $alertColour;
+	background-color: $alertBackground;
+}
+
+.styleguide__helper-text {
+	background-color: $infoBackground;
+}
+
+.styleguide__success-message {
+	background-color: $successBackground;
+}
+
+// Components
+
+// Intro block
+.intro-block {
+	font-size: $heading-font-size;
+	line-height: $heading-line-height;
+	font-weight: $heading-font-weight;
+	@include media($large-plus) {
+		max-width: 50rem;
+	}
+}
+
+.intro-block__paragraph {
+	margin-bottom: $heading-line-height;
+	&--secondary {
+			@include media($up-to-small) {
+				font-size: $base-font-size;
+				line-height: $base-line-height;
+				font-weight: $base-font-weight;
+		}	
+	}
+}
+
+.intro-block__title {
+	display: inline;
+}
+
+.intro-block__location {
+	@include media($up-to-small) {
+		display: none;
+	}	
+}
+
+// stroke helper- break out as a mixin, remember to tweak it to use bourbon prefixers
+.text-stroke {
+	$stroke-colour: $colourWhite;
+	text-shadow:
+  -1px -1px 0 $stroke-colour,
+  1px -1px 0 $stroke-colour,
+  -1px 1px 0 $stroke-colour,
+  1px 1px 0 $stroke-colour; 
+}
+
+.intro-block__external-link {
+	@extend .text-stroke;
+	display:inline-block;
+	color: $base-font-color;
+	&:after {
+		display:block;
+    content:'';
+    width:100%;
+    height:1px;
+    background:$base-font-color;
+    margin-top:-6px;
+	}
+}
+
+
+
+
+

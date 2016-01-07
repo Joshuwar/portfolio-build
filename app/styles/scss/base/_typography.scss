@@ -22,7 +22,6 @@ h6 {
   line-height: $heading-line-height;
   letter-spacing: $heading-font-spacing;
   margin: 0 0 $small-spacing;
-  text-transform: uppercase;
   font-weight: $heading-font-weight; 
 }
 
@@ -33,30 +32,19 @@ p {
 }
 
 a, a:visited {
-  color: $colourBlack;
+	color: $action-color;
   text-decoration: none;
-  transition: all 0.1s linear;
-  border-bottom: 1px solid transparent;
-
+  transition: all 0.2s ease;
   &:active,
   &:focus,
   &:hover {
-    color: $colourGreyDark;
-    // border-bottom: 1px solid $colourGrey;
+    color: darken($action-color, 10%);
   }
 
   &:active,
   &:focus {
     outline: none;
   }
-}
-
-p a {
-  border-bottom: $dark-border;
-}
-
-.link-style {
-	border-bottom: $dark-border;	
 }
 
 hr {

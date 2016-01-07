@@ -1,33 +1,30 @@
 // Typography
+
+// Font family
 $sofia: Sofia Pro; // to replace with appropriate stack & remember font-face declarations
-
 $base-font-family: $sofia;
-$base-font-size: 4rem; 
+$button-font-family: $sofia;
+$heading-font-family: $sofia;
 
+// Font size
+$base-font-size: 1rem;
+$small-font-size: $base-font-size * 0.9;
+$small-heading-size: $base-font-size;
+$heading-font-size: $base-font-size*1.5; 
 $button-font-size: $base-font-size;
 
-$small-font-size: $base-font-size * 0.9;
-$small-line-height: $small-font-size * 1.5;
-
-
-
-$heading-font-family: $sofia;
+// Weight
+$base-font-weight: 500;
 $heading-font-weight: 700;
-$heading-font-spacing: 0.02em;
-$heading-font-size: $base-font-size*1.24;
-
-$small-heading-size: $base-font-size;
-$accordion-heading-size: $base-font-size *0.85;
-
-$button-font-family: $sofia;
-$button-font-spacing: 0.02em;
-
 
 // Line height
+$small-line-height: $small-font-size * 1.5;
 $base-line-height: $base-font-size * 1.5;
-$heading-line-height: 1;
+$heading-line-height: $heading-font-size*1.33;
 
-// Other Sizes
+// Other measures
+$button-font-spacing: 0.02em;
+$heading-font-spacing: 0.02em;
 $base-border-radius: 2px;
 $base-spacing: $base-line-height; // made rems (instead of ems) to provide consistent spacing between differing text-sizes
 $small-spacing: $base-spacing / 1.5;
@@ -44,11 +41,11 @@ $light-gray: #ddd;
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $colourYellow;
+$action-color: $colourBrightRed;
 
 // Borders
-$base-border-color: $colourGreyLight;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $colourGreyDark;
+$base-border: 2px solid $base-border-color;
 
 $light-border-color: $colourGreyLighter;
 $light-border: 1px solid $light-border-color;

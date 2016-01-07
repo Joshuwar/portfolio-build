@@ -1,8 +1,14 @@
 fieldset {
-  background-color: lighten($base-border-color, 10%);
-  border: $base-border;
+  border: none;
+  background-color: $colourGreyLight;
   margin: 0 0 $small-spacing;
   padding: $base-spacing;
+}
+
+legend {
+	width: 100%;
+	float: left;
+	margin-bottom: $small-spacing;
 }
 
 input,
@@ -68,6 +74,8 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline;
   margin-right: $small-spacing;
+  box-shadow: none;
+  width: auto;
 }
 
 input[type="file"] {

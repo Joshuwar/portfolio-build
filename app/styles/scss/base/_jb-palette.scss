@@ -10,6 +10,7 @@ $colourWhite: #fff;
 
 
 // Colours
+$colourBrightRed: rgb(255, 41, 0);
 $colourYellow: #FFEE60;
 $colourYellowLight: #FEFAD7;
 $colourGreen: #6FC72D;
@@ -17,5 +18,7 @@ $colourPink: #FFE5E5;
 $colourFacebook: #3b5998;
 
 // Semantic colours
-$alertBackground: $colourPink;
-$alertBorder: darken($colourPink, 40%);
+$alertBackground: lighten($colourBrightRed, 45%);
+$alertColour: $colourBrightRed;
+$infoBackground: lighten($colourYellow, 25%);
+$successBackground: lighten($colourGreen, 40%);
